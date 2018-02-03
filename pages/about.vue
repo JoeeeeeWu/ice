@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
+    <img src="../static/img/logo.png" alt="Nuxt.js Logo" class="logo" />
     <h1 class="title">
       This page is loaded from the {{ name }}
     </h1>
@@ -16,15 +16,15 @@
 export default {
   asyncData({ req }) {
     return {
-      name: req ? 'server' : 'client'
-    }
+      name: req ? 'server' : 'client',
+    };
   },
   head() {
     return {
-      title: `About Page (${this.name}-side)`
-    }
-  }
-}
+      title: `About Page (${this.name}-side)`,
+    };
+  },
+};
 </script>
 
 <style scoped>

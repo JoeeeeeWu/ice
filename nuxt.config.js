@@ -10,13 +10,13 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
   },
   /*
   ** Global CSS
   */
-  css: ['~assets/css/main.css'],
+  css: ['~static/css/main.css'],
   /*
   ** Customize the progress-bar color
   */
