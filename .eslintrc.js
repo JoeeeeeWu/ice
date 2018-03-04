@@ -11,6 +11,10 @@ module.exports = {
     'html'
   ],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'no-param-reassign': 'off',
+    'func-names': 'off',
+    'no-plusplus': 'off'
+  },
   globals: {}
 }

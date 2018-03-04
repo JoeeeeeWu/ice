@@ -1,15 +1,15 @@
 import Koa from 'koa';
 import { Nuxt, Builder } from 'nuxt';
 import R from 'ramda';
-import { resolve } from 'path';
+import path from 'path';
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
 
 config.dev = !(process.env === 'production');
-const r = path => resolve(__dirname, path);
+const r = pathName => path.resolve(__dirname, pathName);
 const host = process.env.HOST || '127.0.0.1';
 const port = process.env.PORT || 3000;
-const MIDDLEWARES = ['router'];
+const MIDDLEWARES = ['database', 'common', 'router'];
 
 class Server {
   constructor() {
@@ -21,7 +21,7 @@ class Server {
     return R.map(R.compose(
       R.map(i => i(this.app)),
       require,
-      i => `${r('./middlewares')}/${i}`
+      i => `${r('./middlewares')}/${i}`,
     ));
   }
 

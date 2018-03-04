@@ -1,0 +1,6 @@
+{
+  "watch": ["server", "start.js"],
+  "ext": "js",
+  "ignore": ["server/database"],
+  "exec": "node ./start.js"
+}
