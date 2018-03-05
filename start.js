@@ -31,7 +31,7 @@ require('babel-core/register')({
 
 require('babel-polyfill');
 
-// require('./server');
+require('./server');
 
 // require('./server/crawler/imdb');
 
@@ -39,4 +39,4 @@ require('babel-polyfill');
 
 // require('./server/crawler/check');
 
-require('./server/crawler/wiki');
+// require('./server/crawler/wiki');
