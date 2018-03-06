@@ -17,6 +17,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.0.1",
     "formstream": "^1.1.0",
+    "glob": "^7.1.2",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
