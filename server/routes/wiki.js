@@ -17,4 +17,60 @@ export class WechatController {
       success: true,
     };
   }
+
+  @get('/houses/:_id')
+  async getHouse(ctx, next) {
+    const {
+      params: {
+        _id,
+      }
+    } = ctx;
+    if (!_id) {
+      ctx.body = {
+        success: false,
+        err: '_id is required',
+      };
+      return;
+    }
+    const data = await api.wiki.getHouse(_id);
+    ctx.body = {
+      data,
+      success: true,
+    };
+  }
+
+  @get('/characters')
+  async getCharacters(ctx, next) {
+    const {
+      query: {
+        limit = 20,
+      },
+    } = ctx;
+    const data = await api.wiki.getCharacters(limit);
+    ctx.body = {
+      data,
+      success: true,
+    };
+  }
+
+  @get('/characters/:_id')
+  async getCharacter(ctx, next) {
+    const {
+      params: {
+        _id,
+      },
+    } = ctx;
+    if (!_id) {
+      ctx.body = {
+        success: false,
+        err: '_id is required',
+      };
+      return;
+    }
+    const data = await api.wiki.getCharacter(_id);
+    ctx.body = {
+      data,
+      success: true,
+    };
+  }
 }

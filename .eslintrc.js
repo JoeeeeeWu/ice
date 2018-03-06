@@ -14,7 +14,8 @@ module.exports = {
   rules: {
     'no-param-reassign': 'off',
     'func-names': 'off',
-    'no-plusplus': 'off'
+    'no-plusplus': 'off',
+    'class-methods-use-this': 'off'
   },
   globals: {}
 }
