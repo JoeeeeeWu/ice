@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .house(ref="house")
-      .items(v-for="(item, index) in houses" :key="index")
+      .items(v-for="(item, index) in houses" :key="index" @click='showHouse(item)')
         .desc
           .words {{ item.words }}
           .name {{ item.name }}
@@ -9,7 +9,7 @@
     .character
       .title 主要人物
       .section
-        .items(v-for="(item, index) in characters" :key="index")
+        .items(v-for="(item, index) in characters" :key="index" @click='showCharacter(item)')
           img(:src="item.profile")
           .desc
             .name {{ item.name }}
@@ -76,6 +76,22 @@ export default {
       'fetchHouses',
       'fetchCharacters',
     ]),
+    showHouse(item) {
+      this.$router.push({
+        path: '/house',
+        query: {
+          id: item._id,
+        },
+      });
+    },
+    showCharacter(item) {
+      this.$router.push({
+        path: '/character',
+        query: {
+          id: item._id,
+        },
+      });
+    },
   },
   created() {
     this.fetchHouses();

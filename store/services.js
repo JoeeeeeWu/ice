@@ -10,6 +10,14 @@ class Services {
   fetchCharacters() {
     return axios.get(`${baseUrl}/wiki/characters`);
   }
+
+  fetchHouse(id) {
+    return axios.get(`${baseUrl}/wiki/houses/${id}`);
+  }
+
+  fetchCharacter(id) {
+    return axios.get(`${baseUrl}/wiki/characters/${id}`);
+  }
 }
 
 export default new Services();

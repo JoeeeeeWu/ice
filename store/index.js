@@ -6,6 +6,8 @@ const createStore = () => new Vuex.Store({
   state: {
     houses: [],
     characters: [],
+    currentHouse: {},
+    currentCharacter: {},
   },
   actions,
   mutations,
