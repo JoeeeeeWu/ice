@@ -8,7 +8,7 @@ import {
 
 
 @controller('/wiki')
-export class WechatController {
+export default class WechatController {
   @get('/houses')
   async getHouses(ctx, next) {
     const data = await api.wiki.getHouses();

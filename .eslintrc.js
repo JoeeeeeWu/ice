@@ -16,7 +16,8 @@ module.exports = {
     'func-names': 'off',
     'no-plusplus': 'off',
     'class-methods-use-this': 'off',
-    'no-underscore-dangle': 'off'
+    'no-underscore-dangle': 'off',
+    'no-return-assign': 'off'
   },
   globals: {}
 }

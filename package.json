@@ -34,7 +34,8 @@
     "sha1": "^1.1.1",
     "source-map-support": "^0.5.3",
     "vuex": "^3.0.1",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.19",
+    "xss": "^0.3.7"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
