@@ -18,6 +18,10 @@ class Services {
   fetchCharacter(id) {
     return axios.get(`${baseUrl}/wiki/characters/${id}`);
   }
+
+  fetchProducts() {
+    return axios.get(`${baseUrl}/api/products`);
+  }
 }
 
 export default new Services();

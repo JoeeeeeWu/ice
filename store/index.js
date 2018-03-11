@@ -8,6 +8,7 @@ const createStore = () => new Vuex.Store({
     characters: [],
     currentHouse: {},
     currentCharacter: {},
+    products: [],
   },
   actions,
   mutations,

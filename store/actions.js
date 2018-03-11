@@ -1,3 +1,4 @@
+import axios from 'axios';
 import Services from './services';
 
 export default {
@@ -25,5 +26,32 @@ export default {
     const res = await Services.fetchCharacter(_id);
     state.currentCharacter = res.data.data;
     return res; // eslint-disable-line
+  },
+
+  async fetchProducts({ state }) {
+    const res = await Services.fetchProducts();
+    state.products = res.data.data;
+    return res;
+  },
+
+  async saveProduct({ dispatch }, product) {
+    await axios.post('/api/products', product);
+    const res = await dispatch('fetchProducts');
+    return res.data.data;
+  },
+
+  async putProduct({ dispatch }, product) {
+    await axios.put('/api/products', product);
+    const res = await dispatch('fetchProducts');
+    return res.data.data;
+  },
+
+  async deleteProduct({ dispatch }, product) {
+    const {
+      _id,
+    } = product;
+    await axios.delete(`/api/products/${_id}`);
+    const res = await dispatch('fetchProducts');
+    return res.data.data;
   },
 };
