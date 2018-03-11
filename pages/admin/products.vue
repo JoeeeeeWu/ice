@@ -98,6 +98,7 @@ export default {
   },
   data() {
     return {
+      imageCDN: 'http://owfhbsf9s.bkt.clouddn.com/',
       isProduct: false,
       openSnackbar: false,
       edited: {
@@ -167,7 +168,7 @@ export default {
       this.edited.parameters.splice(index, 1);
     },
     async getUptoken(key) {
-      const res = await axios.get('/qiniu/token', {
+      const res = await axios.get('/api/qiniu/token', {
         params: {
           key,
         },
@@ -183,8 +184,7 @@ export default {
         uptoken: token,
         key: Buffer.from(key).toString('base64'),
       };
-      // Uploader.QINIU_UPLOAD_URL = '//up-z2.qiniu.com'
-      const uploader = new Uploader(file, uptoken);
+      const uploader = new Uploader(file, uptoken, '', '', '//up-z2.qiniup.com/');
       uploader.on('progress', () => {
         console.log(uploader.percent);
         // let dashoffset = this.upload.dasharray * (1 - uploader.percent)

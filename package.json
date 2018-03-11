@@ -26,6 +26,7 @@
     "lodash": "^4.17.5",
     "mongoose": "^5.0.4",
     "nuxt": "latest",
+    "qiniu": "^7.1.3",
     "qiniu-web-uploader": "^2.1.2",
     "ramda": "^0.25.0",
     "random-token": "0.0.8",

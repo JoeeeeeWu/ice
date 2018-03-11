@@ -154,7 +154,7 @@ export default class ProductController {
     }
   }
 
-  @get('qiniu/token')
+  @get('/qiniu/token')
   async qiniuToken(ctx, next) {
     const {
       key,

@@ -5,4 +5,8 @@ export default {
     appSecret: 'a9790cabc981f836e33e1d5b863b3f6b',
     token: 'wechat-official',
   },
+  qiniu: {
+    AK: 'f_sDaLl8dNz5D5QjG_50SCctmDrXswYFKrChaaho',
+    SK: '_EG-XfUnupQxMB1LiER3oqdrHmJkWr54_xGCAt2-',
+  },
 };
